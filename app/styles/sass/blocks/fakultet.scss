@@ -1,0 +1,58 @@
+.section-fakultet {
+  background-color: $sandstone;
+  padding: 78px 0;
+
+  .section-title {
+    margin: auto;
+    line-height: 1.25em;
+  }
+
+  .section-subtitle {
+    margin-top: 10px;
+    padding-bottom: 37.5px;
+    max-width: 805px;
+    margin: auto;
+  }
+
+  .about-dtpi-info-blocks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-dtpi-info-block {
+    width: 33.3%;
+    text-align: center;
+
+    .title {
+      line-height: 1.2;
+      font-size: 24px;
+    }
+
+    .value {
+      line-height: 1.2;
+      font-size: 37px;
+      font-weight: 900;
+    }
+  }
+
+  .btn-wrapper {
+    padding-top: 37.5px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section-fakultet {
+    .about-dtpi-info-block {
+      width: 33%;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-fakultet {
+    .about-dtpi-info-block {
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+}

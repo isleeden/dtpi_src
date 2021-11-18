@@ -1,0 +1,132 @@
+.section-qabul {
+  background-color: $stone;
+  text-align: center;
+  padding: 35px 0;
+  color: $white;
+
+  .container {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .qabul-card {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .qabul-subtitle {
+    font-size: 20px;
+    margin: 0;
+    margin-right: 10px;
+    font-weight: 600;
+  }
+
+  .qabul-card-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 800;
+
+    p {
+      font-size: 22px;
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-accent {
+    border-radius: 7px;
+    padding: 10px 0;
+    font-size: 25px;
+    font-weight: 800;
+    min-width: 25.5rem;
+  }
+
+  .qabul-korrupt {
+    font-size: 25px;
+    font-weight: 600;
+    color: $white;
+  }
+
+  .qabul-korrupt:hover {
+    color: $accent;
+    text-decoration: underline;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section-qabul {
+    .qabul-card {
+      align-items: center;
+    }
+
+    .qabul-subtitle {
+      flex-basis: calc(30% - 10px);
+    }
+
+    .qabul-card-value {
+      flex-basis: calc(70% - 10px);
+    }
+
+    .btn-accent {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      width: 80%;
+      font-size: 28px;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    .qabul-korrupt {
+      font-size: 22px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-qabul {
+    p {
+      font-size: 20px;
+    }
+
+    .qabul-subtitle {
+      flex-basis: calc(30% - 10px);
+      padding-left: 10px;
+      margin-right: 0;
+    }
+
+    .qabul-card-value {
+      flex-basis: calc(70% - 10px);
+    }
+
+    .qabul-subtitle {
+      font-size: 18px;
+    }
+
+    .qabul-card-value {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .btn-accent {
+      min-width: unset;
+      padding: 10px 15px;
+      font-size: 18px;
+    }
+
+    .qabul-korrupt {
+      font-size: 20px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+}

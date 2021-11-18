@@ -1,0 +1,63 @@
+.academic-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.academic-card {
+  transition: color 0.3s;
+  color: $black;
+  width: calc(33.3333333333% - 40px);
+  margin: 5px 15px;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+
+  &:hover {
+    img {
+      transform: scale(1.07);
+    }
+
+    .academic-card-title {
+      transform: scale(1.07);
+    }
+  }
+
+  img {
+    transition: transform 0.3s;
+    max-width: 100%;
+  }
+
+  .academic-card-title {
+    transition: transform 0.3s;
+    color: $white;
+    position: absolute;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 35px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6) 80%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .academic-card {
+    width: calc(50% - 30px);
+    margin: 0 10px 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .academic-card {
+    width: calc(100% - 30px);
+    margin: 0 10px 20px;
+
+    .academic-card-title {
+      padding: 20px;
+    }
+  }
+}

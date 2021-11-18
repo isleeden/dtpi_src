@@ -1,0 +1,27 @@
+.section-about-second {
+  background-color: #fff;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  // background-color: $stone;
+}
+
+.section-about-second.scrolled {
+  .about-second-img-wrapper {
+    filter: blur(5px);
+  }
+
+  .about-body {
+    visibility: visible;
+    opacity: 100;
+  }
+}
+
+.about-second-img-wrapper {
+  height: 780px;
+  background-color: $white;
+  background-image: url("../images/dist/about-second.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0px 0px 60px rgba(0, 0, 0, 1);
+}

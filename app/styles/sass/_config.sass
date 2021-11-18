@@ -1,0 +1,79 @@
+// USER VARIABLES SECTION
+
+$accent: #006766 // Accent Color
+$dark-accent: #014241;
+$fontsize: 16px // Body Font Size
+$black: #000 // Text Color
+$white: #fff;
+$refcolor: #006cb8;
+$refhover: #00548f;
+$stone: #031031;
+$choco: #121E38;
+$orange: #f3a421;
+$sandstone: #f9f6ef;
+$mediabg: #f4f4f4;
+$lineheight: 1.6 // Document Line Height
+$sourceSansPro:  Source Sans Pro;
+$sourceSerifPro: Source Serif Pro;
+$userfont: $sourceSansPro // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Source Sans Pro', normal, 200, '../fonts/SourceSansPro-ExtraLight.woff2')
+@include font('Source Sans Pro', normal, 300, '../fonts/SourceSansPro-Light.woff2')
+@include font('Source Sans Pro', normal, 400, '../fonts/SourceSansPro-Regular.woff2')
+@include font('Source Sans Pro', normal, 600, '../fonts/SourceSansPro-SemiBold.woff2')
+@include font('Source Sans Pro', normal, 700, '../fonts/SourceSansPro-Bold.woff2')
+@include font('Source Sans Pro', normal, 800, '../fonts/SourceSansPro-Black.woff2')
+
+@include font('Source Sans Pro', italic, 200, '../fonts/SourceSansPro-ExtraLightItalic.woff2')
+@include font('Source Sans Pro', italic, 300, '../fonts/SourceSansPro-LightItalic.woff2')
+@include font('Source Sans Pro', italic, 600, '../fonts/SourceSansPro-SemiBoldItalic.woff2')
+@include font('Source Sans Pro', italic, 700, '../fonts/SourceSansPro-BoldItalic.woff2')
+@include font('Source Sans Pro', italic, 800, '../fonts/SourceSansPro-BlackItalic.woff2')
+
+@include font('Source Serif Pro', normal, 400, '../fonts/SourceSerifPro-Regular.woff2')
+@include font('Source Serif Pro', normal, 600, '../fonts/SourceSerifPro-SemiBold.woff2')
+@include font('Source Serif Pro', normal, 700, '../fonts/SourceSerifPro-Bold.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+input, textarea
+	outline: none
+
+ul, ol
+	list-style: none
+	margin: 0;
+	padding: 0;	
+
+a 
+	color: $refcolor;
+	text-decoration: none
+
+p 
+	margin: 0
+
+a:hover 
+	color: $refhover
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $black
+	min-width: 320px
+	position: relative
+	overflow-x: hidden

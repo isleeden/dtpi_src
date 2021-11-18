@@ -1,0 +1,22 @@
+.section-faoliyat {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: $white;
+
+  .section-subtitle {
+    max-width: 850px;
+    margin: auto;
+    padding-bottom: 35px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section-faoliyat {
+    .academic-schools {
+      ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}

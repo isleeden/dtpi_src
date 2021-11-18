@@ -1,0 +1,74 @@
+.fixed-media {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  right: -50px;
+  top: 20vh;
+  transition: right 0.4s, opacity 0.3s, visibility 0.3s;
+
+  .fixed-media-button {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    padding: 10px 6px;
+    background-color: $accent;
+    border-radius: 7px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+
+    img {
+      width: 10px;
+      height: auto;
+      transition: transform 0.4s;
+      transform: rotate(180deg);
+    }
+  }
+
+  ul {
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    img {
+      height: 30px;
+    }
+
+    &:hover {
+      animation: rotateAnim 3s linear infinite;
+    }
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 7px;
+  }
+}
+
+.fixed-media.active {
+  right: 0;
+
+  .fixed-media-button {
+    border-radius: 7px;
+
+    img {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.fixed-media.scrolled {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes rotateAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

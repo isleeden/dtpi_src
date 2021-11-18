@@ -1,0 +1,171 @@
+.section-diamond-grid {
+  background-color: $white;
+  background-image: url("../images/dist/interactive-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+
+  .rounds {
+    background-color: rgba($black, 0.3);
+    padding: 45px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .round {
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.5s;
+
+    p {
+      color: $black;
+    }
+  }
+
+  .round:hover {
+    transform: scale(1.07);
+  }
+
+  .round:nth-child(1) {
+    width: 207px;
+    height: 207px;
+    margin-right: 23px;
+    background-color: $white;
+  }
+
+  .round:nth-child(2) {
+    width: 255px;
+    height: 255px;
+    align-self: center;
+    margin-right: 20px;
+    background-color: $refcolor;
+  }
+
+  .round:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    background-color: $orange;
+  }
+
+  .row:nth-child(2) {
+    p {
+      color: $white;
+    }
+
+    .round:nth-child(1) {
+      width: 220px;
+      height: 220px;
+      margin-right: 40px;
+      align-self: center;
+      background-color: $stone;
+    }
+
+    .round:nth-child(2) {
+      width: 240px;
+      height: 240px;
+      background-color: $accent;
+    }
+  }
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 15px;
+  height: 15px;
+  background: rgba($stone, 0.9);
+  animation: animate 5.5s linear infinite;
+  bottom: -150px;
+  border-radius: 100%;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 75%;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(5) {
+  left: 20%;
+  animation-delay: 2s;
+  animation-duration: 11s;
+}
+
+.circles li:nth-child(6) {
+  left: 85%;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+.circles li:nth-child(7) {
+  left: 60%;
+}
+
+.circles li:nth-child(8) {
+  left: 40%;
+  animation-delay: 1.5s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 100%;
+    top: 120%;
+  }
+
+  100% {
+    opacity: 70%;
+    top: -20%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-diamond-grid {
+    .round {
+      margin-bottom: 20px;
+    }
+  }
+}

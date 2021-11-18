@@ -1,0 +1,238 @@
+.section-kafedra {
+  padding-top: 75px;
+  padding-bottom: 37.5px;
+  background-color: $white;
+
+  .section-subtitle {
+    max-width: 920px;
+    margin: auto;
+  }
+
+  .squares-grid {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card-container {
+    position: relative;
+  }
+
+  .card-container > img {
+    opacity: 0;
+    width: 100%;
+  }
+
+  .flex-1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 33.3333333333333%;
+  }
+
+  .landscape {
+    width: 100%;
+  }
+
+  .card-container:hover .card {
+    transform: rotateY(180deg);
+
+    .back-text {
+      opacity: 100%;
+      top: 50%;
+
+      &::before,
+      &::after {
+        visibility: visible;
+        opacity: 100%;
+      }
+
+      &::before {
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      &::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .square {
+    width: 50%;
+  }
+
+  .card {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+  }
+
+  .card .front,
+  .card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .card .back-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark-accent, 0.55);
+  }
+
+  .back .back-text {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    opacity: 0;
+    top: 110%;
+    color: $white;
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
+    transition: top 0.7s ease-in-out, opacity 0.9s;
+
+    &::before,
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      opacity: 0;
+      height: 2px;
+      border-radius: 7px;
+      width: 50%;
+      transform: translateX(0);
+      background-color: $white;
+    }
+
+    &::before {
+      top: 0;
+      right: -50%;
+      transition: right 0.8s, opacity 1s, translateX 1s;
+    }
+
+    &::after {
+      bottom: 0;
+      left: -50%;
+      transition: left 0.8s, opacity 1s, translateX 1s;
+    }
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card .back {
+    transform: rotateY(180deg);
+  }
+}
+
+.academic-schools {
+  padding: 37.5px 0;
+
+  .academic-schools-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0 0 12px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      padding: 0 12.5px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      position: relative;
+      font-size: 22.5px;
+      display: block;
+      line-height: 1.2;
+    }
+
+    a::after {
+      display: block;
+      content: "";
+      width: 0;
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      height: 3px;
+      transition: 0.4s;
+      background-color: $refcolor;
+    }
+
+    .hover a::after,
+    a:hover::after {
+      left: 0;
+      width: 100%;
+    }
+
+    li:not(:last-child) {
+      border-right: 2px solid $black;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section-kafedra {
+    .flex-1 {
+      width: 100%;
+    }
+  }
+
+  .academic-schools {
+    padding: 37.5px 0;
+
+    .academic-schools-title {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      flex-direction: column;
+
+      li {
+        text-align: center;
+        font-weight: 600;
+      }
+
+      li:not(:last-child) {
+        border-right: none;
+        margin-bottom: 15px;
+      }
+
+      .hover a::after,
+      a:hover::after {
+        left: 50%;
+        transform: translate(-50%);
+        width: 50%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 435px) {
+  .section-kafedra {
+    .square {
+      width: 100%;
+    }
+  }
+}

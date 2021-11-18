@@ -1,0 +1,87 @@
+.section-departament {
+  padding-bottom: 75px;
+  background-color: $stone;
+  color: $white;
+
+  .section-subtitle {
+    max-width: 805px;
+    margin: auto;
+  }
+
+  .departament-white-bg {
+    padding-top: 70px;
+    color: $black;
+    background-color: $sandstone;
+  }
+
+  .departament-info-blocks {
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 78px;
+  }
+
+  .departament-info-block {
+    text-align: center;
+    width: 33%;
+  }
+
+  .departament-info-block-title {
+    font-size: 37px;
+    font-weight: 900;
+  }
+
+  .departament-info-block-subtitle {
+    font-size: 24px;
+  }
+
+  .departament-second-title {
+    text-align: center;
+    font-size: 46px;
+    font-weight: 700;
+    margin: auto;
+    margin-bottom: 37px;
+    max-width: 800px;
+  }
+
+  .departament-news-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section-departament {
+    .departament-info-block {
+      flex-basis: 50%;
+      margin-bottom: 20px;
+    }
+
+    .departament-info-block-title {
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    .departament-info-block-subtitle {
+      font-size: 19px;
+    }
+
+    .departament-second-title {
+      font-size: 44px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-departament {
+    .departament-info-block {
+      flex-basis: 100%;
+    }
+
+    .departament-second-title {
+      font-size: 32px;
+    }
+  }
+}

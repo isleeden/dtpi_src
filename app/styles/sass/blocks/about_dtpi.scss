@@ -1,0 +1,25 @@
+.section-about-dtpi {
+  background-color: $sandstone;
+
+  .about-dtpi-image {
+    height: 500px;
+    background-image: url("../images/dist/about-dtp-bg.jpg");
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section-about-dtpi {
+    .about-dtpi-image {
+      height: 330px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-about-dtpi {
+    .about-dtpi-info-block {
+      width: 100%;
+    }
+  }
+}

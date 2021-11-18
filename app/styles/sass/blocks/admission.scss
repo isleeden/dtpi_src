@@ -1,0 +1,79 @@
+.section-admission {
+  background-color: $white;
+  padding-top: 75px;
+  padding-bottom: 37.5px;
+
+  .section-subtitle {
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .admission-banner {
+    position: relative;
+    margin: 0 20px;
+
+    img {
+      width: 100%;
+    }
+
+    .text-wrapper {
+      color: $white;
+      width: 100%;
+      padding: 17px;
+      background-image: linear-gradient(180deg, transparent 0, #000 99%);
+      position: absolute;
+      bottom: 0;
+      transition: 0.3s opacity, 0.3s visibility;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    p {
+      max-width: 788px;
+      font-size: 17px;
+    }
+
+    span {
+      font-weight: 900;
+      margin-right: 9px;
+      text-transform: uppercase;
+    }
+
+    &:hover .text-wrapper {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
+
+  .admission-desc {
+    padding: 44px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .admission-desc-block {
+    width: calc(50% - 40px);
+    margin: 0 20px;
+  }
+
+  .admission-desc-title {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .admission-desc-subtitle {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-admission {
+    .admission-desc-block {
+      width: calc(100% - 20px);
+      margin-bottom: 20px;
+    }
+  }
+}

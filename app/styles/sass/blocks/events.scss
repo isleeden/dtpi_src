@@ -1,0 +1,137 @@
+.section-events {
+  padding-top: 78px;
+  background-color: $choco;
+  padding-bottom: 75px;
+
+  .section-title {
+    color: $white;
+  }
+
+  .section-subtitle {
+    color: $white;
+  }
+
+  .events-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .event-card {
+    width: calc(25% - 43.75px);
+    background-color: $white;
+    height: 560px;
+    margin: 0 17.5px 35px;
+    border-radius: 7px;
+    transition: transform 0.3s;
+
+    .img-wrapper {
+      border-radius: 7px;
+      max-height: 55%;
+      overflow: hidden;
+    }
+
+    &:hover {
+      img {
+        transition: 0.5s ease-in-out;
+        transform: scale(1.03);
+      }
+
+      .event-card-subtitle {
+        color: $refhover;
+      }
+    }
+
+    img {
+      border-radius: 7px;
+      width: 100%;
+    }
+  }
+
+  .event-card-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .event-card-date {
+    border-radius: 7px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $orange;
+    margin-top: -35px;
+
+    p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.1;
+      color: $choco;
+    }
+
+    p:nth-child(2) {
+      font-weight: 600;
+      font-size: 22.5px;
+    }
+  }
+
+  .event-card-title {
+    text-transform: uppercase;
+    color: $dark-accent;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .event-card-subtitle {
+    transition: color 0.3s;
+    line-height: 1.2;
+    color: $black;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .event-card-time {
+    color: $dark;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .section-events {
+    .event-card {
+      margin: 0 10px 20px;
+      width: calc(50% - 30px);
+      height: 610px;
+
+      .event-card-subtitle {
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-events {
+    .event-card {
+      margin: 0 50px 20px;
+      width: calc(100% - 100px);
+      height: 100%;
+
+      img {
+        width: 100%;
+      }
+
+      .event-card-text {
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
